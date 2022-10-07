@@ -1,0 +1,97 @@
+/*Mobile first*/
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    
+}
+
+.container {  /*määrittelee kokonaisuuden leveyden*/
+    box-sizing: border-box;
+    width: 40rem;
+    border: solid black;
+    border-radius: 2rem;
+    background-color: gainsboro;
+    background-image: linear-gradient(bottom right, gainsboro, white);
+    padding: 1rem;
+}
+
+.container .otsikko {
+    float: right;
+    width: 70%;
+    box-sizing: border-box;
+    padding: 0rem 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.container .leipateksti {
+    float: right;
+    width: 70%;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.container .kuva {
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+    /*alla raamien säännöt*/
+    padding: 5px;
+    border: solid 1px lightgrey;
+    background-color: white;
+    max-width: 100%;
+}
+
+.kuva > * {  /*huom säännöt kaikkiin lapsiin eli img*/
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.clearfix:after {
+    visibility: hidden; /*Lisätty sisältö piilotetaan*/
+    display: block;  /*Näkyvyys määritellään block-tasoiseksi, valloittaa käytettävissä olevan tilan kokonaan*/
+    font-size: 0;  /*Fonttikoko on nolla*/
+    content: " ";  /*Sisältö on tyhjä*/
+    clear: both;  /*Floatit lopetetaan*/
+    height: 0;  /*Korkeus on tyhjä*/
+    overflow: auto;
+}
+
+/*Tablet-näkymä*/
+@media only screen and (min-width: 426px) {
+    body > * {
+        margin: 0;
+    }
+
+    .container {
+        width: 73rem;
+        box-sizing: border-box;
+        margin-top: 0rem;
+        margin-right: 0rem;
+        margin-left: 0rem;
+        background-color: lightslategray;
+    }
+  }
+
+/*Desktop-näkymä*/
+ @media only screen and (min-width: 769px) {
+    body > * {
+        margin: 0rem;
+    }
+    
+    .container {
+        width: 98rem;
+        box-sizing: border-box;
+        margin-top: 0rem;
+        margin-right: 0rem;
+        margin-left: 0rem;
+        background-color: lightgrey;
+    }
+  }
